@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TestTrainMenachemModelStoreContainer" CdmEntityContainer="TestTrainMenachemEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="TestTrainMenachemModel.City">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="cityId" ColumnName="cityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Streets">
+      <EntityTypeMapping TypeName="TestTrainMenachemModel.Street">
+        <MappingFragment StoreEntitySet="Streets">
+          <ScalarProperty Name="cityId" ColumnName="cityId" />
+          <ScalarProperty Name="streetName" ColumnName="streetName" />
+          <ScalarProperty Name="streetId" ColumnName="streetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,11 @@
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\3.DAL.dll
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\3.DAL.pdb
+C:\Users\smeni\Desktop\Maps2\3.DAL\obj\Debug\3.DAL.csprojResolveAssemblyReference.cache
+C:\Users\smeni\Desktop\Maps2\3.DAL\obj\Debug\3.DAL.csproj.CoreCompileInputs.cache
+C:\Users\smeni\Desktop\Maps2\3.DAL\obj\Debug\3.DAL.dll
+C:\Users\smeni\Desktop\Maps2\3.DAL\obj\Debug\3.DAL.pdb
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\3.DAL.dll.config
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\EntityFramework.dll
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\EntityFramework.xml
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\smeni\Desktop\Maps2\3.DAL\bin\Debug\EntityFramework.SqlServer.xml

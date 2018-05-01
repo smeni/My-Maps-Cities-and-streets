@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestTrainMenachemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="cityId" />
+    </Key>
+    <Property Name="cityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cityName" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Streets">
+    <Key>
+      <PropertyRef Name="streetId" />
+    </Key>
+    <Property Name="streetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="streetName" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="cityId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Streets_Cities">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+    <End Role="Streets" Type="Self.Streets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="cityId" />
+      </Principal>
+      <Dependent Role="Streets">
+        <PropertyRef Name="cityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestTrainMenachemModelStoreContainer">
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Streets" EntityType="Self.Streets" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Streets_Cities" Association="Self.FK_Streets_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Streets" EntitySet="Streets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

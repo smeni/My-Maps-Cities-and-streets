@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestTrainMenachemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TestTrainMenachemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="TestTrainMenachemModel.City" />
+    <EntitySet Name="Streets" EntityType="TestTrainMenachemModel.Street" />
+    <AssociationSet Name="FK_Streets_Cities" Association="TestTrainMenachemModel.FK_Streets_Cities">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Street" EntitySet="Streets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="cityId" />
+    </Key>
+    <Property Name="cityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cityName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Streets" Relationship="TestTrainMenachemModel.FK_Streets_Cities" FromRole="City" ToRole="Street" />
+  </EntityType>
+  <EntityType Name="Street">
+    <Key>
+      <PropertyRef Name="streetId" />
+    </Key>
+    <Property Name="streetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="streetName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="cityId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="TestTrainMenachemModel.FK_Streets_Cities" FromRole="Street" ToRole="City" />
+  </EntityType>
+  <Association Name="FK_Streets_Cities">
+    <End Type="TestTrainMenachemModel.City" Role="City" Multiplicity="1" />
+    <End Type="TestTrainMenachemModel.Street" Role="Street" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="cityId" />
+      </Principal>
+      <Dependent Role="Street">
+        <PropertyRef Name="cityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

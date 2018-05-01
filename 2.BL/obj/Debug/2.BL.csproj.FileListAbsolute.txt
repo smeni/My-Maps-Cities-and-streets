@@ -1,0 +1,14 @@
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\2.BL.dll
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\2.BL.pdb
+C:\Users\smeni\Desktop\Maps2\2.BL\obj\Debug\2.BL.csprojResolveAssemblyReference.cache
+C:\Users\smeni\Desktop\Maps2\2.BL\obj\Debug\2.BL.csproj.CoreCompileInputs.cache
+C:\Users\smeni\Desktop\Maps2\2.BL\obj\Debug\2.BL.dll
+C:\Users\smeni\Desktop\Maps2\2.BL\obj\Debug\2.BL.pdb
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\3.DAL.dll
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\EntityFramework.dll
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\3.DAL.pdb
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\3.DAL.dll.config
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\EntityFramework.xml
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\2.BL.dll.config
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\smeni\Desktop\Maps2\2.BL\bin\Debug\EntityFramework.SqlServer.xml

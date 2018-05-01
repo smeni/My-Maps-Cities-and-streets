@@ -1,0 +1,42 @@
+﻿@model _3.DAL.Street
+
+@{
+    ViewBag.Title = "CreateView";
+}
+
+<body class="enjoy-css">
+
+    <h2>Create new Street</h2>
+
+
+    <div class="form-group" id="exist_city">
+        <label>Select the City that you want to add street:</label>
+
+        <select id="cityesList">
+            <option selected="selected">select city</option>
+        </select>
+    </div>
+    <label>City dosn't exsist? <a id="hide">Click here</a></label>
+    <div id="new_city">
+        <label> Enter New city Name here:</label>
+        <input type="text" id="newCity" value="" />
+    </div>
+    <br />
+    <div>
+        <label>Enter the Name of new street here:</label>
+        <input type="text" id="newStreet" value="" formnovalidate="formnovalidate"/>
+    </div>
+
+    <input type="button" id="AddNewBtn" value="ADD TO DB" /><hr />
+
+    <div><a href="/Home/Index/">Back To Home Page</a></div>
+</body>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/scripts/CreateScripts.js"></script>
+<link href="~/Content/CreateNewStyleSheet1.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.validate.js"></script>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
